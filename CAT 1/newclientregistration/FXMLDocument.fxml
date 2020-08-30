@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="666.0" prefWidth="582.0" styleClass="body" stylesheets="@Background.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newclientregistration.FXMLDocumentController">
+    <children>
+        <Button fx:id="button" defaultButton="true" layoutX="405.0" layoutY="627.0" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: pink;" text="Complete Registration">
+         <textFill>
+            <RadialGradient centerX="1.0" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#00000076" />
+                  <Stop color="#d30808" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+        </Button>
+        <Label fx:id="label" layoutX="23.0" layoutY="126.0" minHeight="16" minWidth="56.0" prefHeight="32.0" prefWidth="80.0" text="Age:" textAlignment="RIGHT" textFill="#b21b1b">
+         <font>
+            <Font name="Vivaldi Italic" size="25.0" />
+         </font></Label>
+      <Text fill="#946262" layoutX="94.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Serenity Beauty Salon" textAlignment="CENTER" wrappingWidth="391.13671875">
+         <font>
+            <Font name="Vivaldi Italic" size="41.0" />
+         </font>
+      </Text>
+      <Label layoutX="14.0" layoutY="77.0" prefHeight="33.0" prefWidth="127.0" text="Full Name:" textAlignment="CENTER" textFill="#ab1010" textOverrun="CLIP">
+         <font>
+            <Font name="Vivaldi Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="169.0" text="Gender:" textFill="#b21e1e">
+         <font>
+            <Font name="Vivaldi Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="7.0" layoutY="210.0" text="Phone Number:" textFill="#ae1010">
+         <font>
+            <Font name="Vivaldi Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="255.0" text="Email:" textFill="#a11010">
+         <font>
+            <Font name="Vivaldi Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="305.0" text="Address:" textFill="#a81212">
+         <font>
+            <Font name="Vivaldi Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="354.0" text="How did you hear about Serenity Beauty Salon?" textFill="#a10a0a">
+         <font>
+            <Font name="Vivaldi Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextField layoutX="222.0" layoutY="81.0" prefHeight="25.0" prefWidth="299.0" style="-fx-border-radius: 10;" />
+      <TextField layoutX="225.0" layoutY="213.0" prefHeight="25.0" prefWidth="299.0" />
+      <TextField layoutX="226.0" layoutY="258.0" prefHeight="25.0" prefWidth="299.0" />
+      <TextField layoutX="226.0" layoutY="309.0" prefHeight="25.0" prefWidth="299.0" />
+      <RadioButton layoutX="78.0" layoutY="387.0" mnemonicParsing="false" selected="true" text="Facebook" textFill="#9e1515">
+         <font>
+            <Font name="Vivaldi Italic" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="hear" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="83.0" layoutY="426.0" mnemonicParsing="false" text="Instagram" textFill="#b90d0d" toggleGroup="$hear">
+         <font>
+            <Font name="Vivaldi Italic" size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="222.0" layoutY="363.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="251.0" text="Word of Mouth/Client" textFill="#a11010" toggleGroup="$hear" AnchorPane.bottomAnchor="233.0" AnchorPane.leftAnchor="222.0" AnchorPane.rightAnchor="109.0" AnchorPane.topAnchor="363.0">
+         <font>
+            <Font name="Vivaldi Italic" size="15.0" />
+         </font>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </RadioButton>
+      <RadioButton layoutX="225.0" layoutY="422.0" mnemonicParsing="false" text="Internet Search" textFill="#a41010" toggleGroup="$hear">
+         <font>
+            <Font name="Vivaldi Italic" size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="232.0" layoutY="174.0" mnemonicParsing="false" selected="true" text="Male" textFill="#940808">
+         <font>
+            <Font name="Vivaldi Italic" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="383.0" layoutY="174.0" mnemonicParsing="false" text="Female" textFill="#8d0808" toggleGroup="$gender">
+         <font>
+            <Font name="Vivaldi Italic" size="15.0" />
+         </font>
+      </RadioButton>
+      <DatePicker layoutX="222.0" layoutY="130.0" prefHeight="25.0" prefWidth="299.0" promptText="Selelct Date of Birth" />
+      <Label layoutX="23.0" layoutY="462.0" text="How often do you visit salons?" textFill="#a83232">
+         <font>
+            <Font name="Vivaldi Italic" size="25.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="combobox" editable="true" layoutX="330.0" layoutY="466.0" prefWidth="150.0" promptText="Interval" visibleRowCount="5" />
+      <Label layoutX="17.0" layoutY="502.0" text="Desired Services (select all that apply)" textFill="#d32222">
+         <font>
+            <Font name="Vivaldi Italic" size="25.0" />
+         </font>
+      </Label>
+      <CheckBox layoutX="31.0" layoutY="548.0" mnemonicParsing="false" text="Braiding" textFill="#c91313">
+         <font>
+            <Font name="Vivaldi Italic" size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox layoutX="124.0" layoutY="548.0" mnemonicParsing="false" text="Relaxing and/or Treatment and/or Highlighting" textFill="#b90f0f">
+         <font>
+            <Font name="Vivaldi Italic" size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox layoutX="418.0" layoutY="548.0" mnemonicParsing="false" text="Facials" textFill="#c31717">
+         <font>
+            <Font name="Vivaldi Italic" size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox layoutX="270.0" layoutY="586.0" mnemonicParsing="false" text="Haircut" textFill="#b50a0a">
+         <font>
+            <Font name="Vivaldi Italic" size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox layoutX="36.0" layoutY="584.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="164.0" text="Pedicure and/or Manicure" textFill="#b51212">
+         <font>
+            <Font name="Vivaldi Italic" size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox layoutX="418.0" layoutY="586.0" mnemonicParsing="false" text="100% Unsure" textFill="#ae0c0c">
+         <font>
+            <Font name="Vivaldi Italic" size="15.0" />
+         </font>
+      </CheckBox>
+    </children>
+</AnchorPane>
